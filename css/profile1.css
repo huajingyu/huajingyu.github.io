@@ -1,0 +1,6 @@
+@import "hjystyle.css";
+@import "planetarian.css";
+@import "memooff.css";
+body{
+    background-image: url(../res/theme/background/memooff/BG002A_H.png);
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>猜数字</title>
+	<script>
+		var gameend=false;
+		var y=0;answer=Math.floor(Math.random()*99+1);
+		//alert("正确数字为 "+answer);
+		window.onload=function(){
+			document.getElementById("loading").style="display: none;";
+			document.getElementById('main').style="display: block";
+			document.getElementById('help').style="margin-top: 16px; display: block";
+		}
+		function guess(){
+			if(parseInt(document.getElementById("number").value)<parseInt(answer))
+			{
+				alert("过小。");                
+			}
+			if(parseInt(document.getElementById("number").value)>parseInt(answer))
+			{
+				alert("过大。");
+			}
+			if(parseInt(document.getElementById("number").value)==parseInt(answer))
+			{
+				alert("成功。单击重新开始以重新开始游戏。");
+				document.getElementById("submitbutton").disabled=true;
+				gameend=true;
+			}
+			y++;
+			document.getElementById("information").innerHTML = "您已猜测 "+y+" 次。";
+			if(y>=10 && gameend==false){
+				alert("胜败乃兵家常事，大侠请重新来过。");
+				document.getElementById("submitbutton").disabled=true;
+			}
+		}
+	</script>
+	<style>
+		*{
+			font-family: SimHei,黑体;
+		}
+	</style>
+</head>
+<body>
+	<div id="loading">
+		载入中……<br>
+		※如果无法运行则您可能未启用或浏览器不支持 JavaScript。
+	</div>
+	<div id="main" style="display:none">
+		<h1>猜数字</h1>
+		<input type="text" value=0 id="number" onkeydown='if(event.keyCode==13){guess();}'><br>
+		<span id="information"></span><br>
+		<input type="submit" value="提交" onclick="guess()" id="submitbutton"><input type="reset" value="重新开始" onclick="location.reload()">
+	</div>
+	<div id=help style="margin-top: 16px; display: none">
+		<b>帮助</b><br>
+		随机取值，范围为 1 到 100，有 10 次试错机会，<br>
+		当输入错误时会根据你的输入结果显示“过大”或“过小”。<br>
+		当 10 次内猜中数字时，成功。<br>
+		当 10 次内没有猜中数字时，游戏结束。
+	</div>
+</body>
+</html>
