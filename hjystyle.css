@@ -1,0 +1,429 @@
+* {
+	margin: 0;
+	padding: 0;
+	word-wrap: break-word;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: white;
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	-webkit-text-size-adjust: 100%;
+}
+
+a:visited {
+	color: purple;
+}
+a:visited:hover {
+	background: purple;
+	color: white;
+}
+a:visited:active{
+	background: white;
+	color: black;
+}
+
+a:link {
+	color: navy;
+	transition: all 0.2s;
+}
+
+a:link:hover {
+	text-decoration: none;
+	background: navy;
+	color: white;
+	transition: all 0.2s;
+}
+
+a:link:active {
+	background: white;
+	color: black;
+	transition: all 0.0s;
+}
+
+li {
+	margin-left: 32px;
+}
+input[type=text],input[type=search],textarea{
+	box-sizing: border-box;
+	width: 100%;
+	background: white;
+	border: 1px solid black;
+}
+table {
+	border: 1px;
+	border-color: black;
+}
+table.viewtable {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-width: 1px;
+	border-style: solid;
+}
+table.viewtable>tbody>tr>td,table.viewtable>tbody>tr>th{
+	border-width: 1px;
+	border-style: solid;
+}
+table,td,th {
+	border-color: black;
+}
+
+.pagewindow {
+	padding: 8px;
+}
+
+.page {
+	margin: 0px;
+}
+
+.box {
+	padding: 8px;
+	box-sizing: border-box;
+	border: 2px solid black;
+	border-radius: 16px;
+	background: rgb(255, 255, 255);
+	background-color: rgba(255, 255, 255, 0.6);
+	filter: progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#9FFFFFFF', endColorstr = '#9FFFFFFF') ;
+	max-width: 768px;
+	height: 100%;
+	margin: 0 auto;
+	animation: loadanima 0.5s;
+	opacity: 100%;
+}
+@keyframes loadanima {
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 100%;
+	}
+}
+
+.maintitle {
+	font-size: 24px;
+}
+
+.menu {
+	background: rgb(255, 255, 255);
+	background-color: rgba(255, 255, 255, 0.5);
+	filter: progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#9FFFFFFF', endColorstr = '#9FFFFFFF') ;
+	border-radius: 8px;
+	padding: 0px;
+	width: auto;
+	height: auto;
+	line-height: none;
+	list-style-type: none;
+	text-align: center;
+	overflow: auto;
+	border: 1px solid black;
+	margin: 8px 0;
+	display: block;
+}
+
+.menu a {
+	padding: 8px;
+	display: inline-block;
+	border-radius: 8px;
+}
+
+.menu a:visited {
+	color: black;
+}
+
+.menu a:visited:hover {
+	background: black;
+	color: white;
+}
+
+.menu a:visited:active {
+	background: white;
+	color: black;
+}
+
+.menu a:link {
+	text-decoration: none;
+	color: black;
+}
+
+.menu a:link:hover {
+	background: black;
+	color: white;
+}
+
+.menu a:link:active {
+	background: white;
+	color: black;
+}
+
+.menu .selected {
+	background-color: white;
+	border: 1px solid black;
+}
+
+.bottom {
+	text-align: center;
+}
+
+.prelative {
+	position: relative;
+}
+
+.susleft {
+	margin: 8px;
+	max-width: 50%;
+	position: absolute;
+	float: left;
+	top: 0;
+	left: 0;
+	margin-right: 8px;
+}
+
+.susright {
+	margin: 8px;
+	max-width: 50%;
+	position: absolute;
+	float: right;
+	top: 0;
+	right: 0;
+	margin-left: 8px;
+}
+
+.left {
+	max-width: 360px;
+	float: left;
+}
+
+.right {
+	max-width: 360px;
+	float: right;
+}
+
+.main {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	clear: both;
+}
+
+.window {
+	background: rgb(255, 255, 255);
+	background-color: rgba(255, 255, 255, 0.5);
+	filter: progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#9FFFFFFF', endColorstr = '#9FFFFFFF') ;
+	border-radius: 8px;
+	border: 1px solid black;
+	padding: 8px;
+	margin: 8px;
+}
+.divblock > div{
+	padding: 8px 4px;
+	display: block;
+	float: left;
+	width: 50%;
+	box-sizing: border-box;
+}
+@media screen and (min-width: 720px) {
+	.divblock > div{
+		width: 25%;
+	}
+}
+@media screen and (max-width: 425px) {
+	body {
+		height: 100%;
+	}
+	.menu a {
+		padding: 4px;
+	}
+
+	.box {
+		max-width: none;
+		margin: 0;
+		padding: 8px;
+		border-radius: 0;
+		border: none;
+		background: none;
+	}
+
+	.pagewindow {
+		padding: 0px;
+		background: rgb(255, 255, 255);
+		background-color: rgba(255, 255, 255, 0.6);
+		filter: progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#9FFFFFFF', endColorstr = '#9FFFFFFF') ;
+		min-height: 100%;
+	}
+
+	.left {
+		margin: 8px -8px;
+		max-width: none;
+		float: none;
+	}
+
+	.right {
+		margin: 8px -8px;
+		max-width: none;
+		float: none;
+	}
+
+	.main {
+		clear: both;
+	}
+
+	.scrolldiv {
+		white-space: nowrap;
+		overflow-y: auto;
+	}
+	.divblock > div{
+		width: 100%;
+	}
+}
+
+@media (max-width: 240px) {
+	.menu {
+		border: none;
+		border-radius: 0;
+		margin: 8px -8px;
+		padding: 0;
+	}
+
+	.menu a {
+		display: block;
+		padding: 0 8px;
+		border-radius: 0;
+	}
+
+	.window {
+		border-radius: 0;
+	}
+}
+
+@media (min-width: 1024px) and (min-height: 500px) {
+	.menu {
+		position: fixed;
+		align-items: center;
+		left: -450px;
+		right: 450px;
+		top: 32px;
+		margin: auto;
+		width: 100px;
+		max-height: 400px;
+		animation: loadanima 0.5s;
+	}
+
+	.menu a {
+		display: block;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: black;
+	}
+
+	* {
+		color: white;
+	}
+
+	a:visited {
+		color: fuchsia;
+	}
+
+	a:visited:hover {
+		background: fuchsia;
+		color: black;
+	}
+
+	a:visited:active {
+		background: black;
+		color: white;
+	}
+	
+	a:link {
+		color: aqua;
+	}
+
+	a:link:hover {
+		background: aqua;
+		color: black;
+	}
+
+	a:link:active {
+		background: black;
+		color: white;
+	}
+
+	input[type=text],input[type=search],textarea{
+		background: black;
+		border: 1px solid white;    
+	}
+
+	table.viewtable {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	table,td,th {
+		border-color: white;
+	}
+
+	.box {
+		border: 2px solid white;
+		background: rgb(0, 0, 0);
+		background-color: rgba(0, 0, 0, 0.6);
+		filter: progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#9F000000', endColorstr = '#9F000000') ;
+	}
+
+	.menu {
+		background: rgb(0, 0, 0);
+		background-color: rgba(0, 0, 0, 0.5);
+		filter: progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#7F000000', endColorstr = '#7F000000') ;
+		border: 1px solid white;
+	}
+
+	.menu a:visited,.menu a:link {
+		color: white;
+	}
+
+	.menu a:visited:hover,.menu a:link:hover {
+		background: white;
+		color: black;
+	}
+
+	.menu a:visited:active,.menu a:link:active {
+		background: black;
+		color: white;
+	}
+
+	.menu .selected {
+		background-color: black;
+		border: 1px solid white;
+	}
+
+	.window {
+		background: rgb(0, 0, 0);
+		background-color: rgba(0, 0, 0, 0.5);
+		filter: progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#7F000000', endColorstr = '#7F000000') ;
+		border: 1px solid white;
+	}
+
+	@media (max-width: 425px) {
+		.box {
+			border: none;
+			background: none;
+		}
+
+		.pagewindow {
+			background: rgb(0, 0, 0);
+			background-color: rgba(0, 0, 0, 0.6);
+			filter: progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#9F000000', endColorstr = '#9F000000') ;
+		}
+	}
+
+	@media (max-width: 240px) {
+		.menu {
+			border: none;
+		}
+	}
+}
